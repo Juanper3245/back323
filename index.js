@@ -5,6 +5,7 @@ const app=express();//metodo cosntructor de la libreria
 const PORT=4100;//puesto don de desplegaremos el server
 
 import rutausuario from "./src/modules/usuario/usuario.routes.js";
+import rutaproducto from "./src/modules/producto/producto.routes.js";
 
 
 // Middlewares
@@ -12,6 +13,7 @@ app.use(express.json()); // Para que el servidor entienda JSON en el body
 app.use(cors());
 //ruta para los endpoints
 app.use("/api", rutausuario);
+app.use("/api", rutaproducto);
 
 
 
